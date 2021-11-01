@@ -12,6 +12,9 @@ export default function Home() {
         <meta name="description" content="Need a web app done efficiently and reliably? You've come to the right place!" />
         <meta name="keyword" content="leonndp, portfolio, developer, full stack, front end, back end, react, mongo, mongodb, express.js, node.js, react native, javascript" />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@700&display=swap" rel="stylesheet" /> 
       </Head>
 
       <Header />

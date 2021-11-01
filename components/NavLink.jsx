@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 function NavLink({children, active}) {
     return (
-        <div className='text-md font-bold uppercase cursor-pointer relative group'>
+        <div className='text-md font-bold uppercase font-orbitron cursor-pointer relative group text-shadow-lg tracking-widest'>
         <Link href="/">
             {children}
         </Link>

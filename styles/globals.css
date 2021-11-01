@@ -18,4 +18,38 @@
   h3 {
     @apply text-2xl;
   }
+
+  h4 {
+    @apply text-xl;
+  }
+
+  h5 {
+    @apply text-lg;
+  }
+}
+
+@layer components {
+  .timeline {
+    @apply relative overflow-hidden h-full;
+  }
+
+  .timeline-border {
+    @apply absolute border-opacity-20 border-gray-700 h-full border left-1/2;
+  }
+
+  .timeline-right {
+    @apply mb-8 flex justify-between items-center w-full;
+  }
+
+  .timeline-left {
+    @apply mb-8 flex justify-between flex-row-reverse items-center w-full;
+  }
+
+  .timeline-img-container {
+    @apply relative z-20 flex items-center order-1 shadow-xl w-12 h-12;
+  }
+
+  .timeline-card {
+    @apply order-1 bg-gray-800 shadow-xl w-5/12 p-8 border-t-8 border-blue-500;
+  }
 }

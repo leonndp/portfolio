@@ -15,20 +15,20 @@ function AboutCard() {
                     <Image src='/me.jpg' layout="fill" objectFit="cover" />
                 </div>
                 <div className="col-span-1 lg:col-span-2">
-                    <h1>I'm <strong>Leon N. Dela Pena</strong></h1>
+                    <h1>I'm <strong className="font-orbitron">Leon N. Dela Pena</strong></h1>
                     <h3>Full-Stack Web Developer</h3>
-                    <hr className="my-5 text-gray-700" />
+                    <hr className="my-5 border-gray-700" />
                     <table className="leading-6">
                         <tr>
-                            <td className="font-bold uppercase pr-16">Age</td>
+                            <td className="font-orbitron font-bold uppercase text-blue-500 pr-16">Age</td>
                             <td>24</td>
                         </tr>
                         <tr>
-                            <td className="font-bold uppercase pr-16">Based in</td>
+                            <td className="font-orbitron font-bold uppercase text-blue-500 pr-16">Based in</td>
                             <td>Chicago, Illinois</td>
                         </tr>
                         <tr>
-                            <td className="font-bold uppercase pr-16">E-mail</td>
+                            <td className="font-orbitron font-bold uppercase text-blue-500 pr-16">E-mail</td>
                             <td>leonndp@gmail.com</td>
                         </tr>
                     </table>

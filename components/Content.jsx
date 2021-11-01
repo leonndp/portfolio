@@ -1,4 +1,5 @@
 import About from "./AboutCard"
+import Experience from "./Experience"
 import Skills from "./Skills"
 
 function Content() {
@@ -7,6 +8,7 @@ function Content() {
             <div className="container mx-auto px-5 sm:px-10 xl:px-40 2xl:px-72">
                 <About />
                 <Skills />
+                <Experience />
             </div>
         </div>
     )
