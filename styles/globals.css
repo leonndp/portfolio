@@ -7,6 +7,13 @@
     @apply bg-gray-900 text-gray-300 overflow-x-hidden;
   }
 
+  input,
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    @apply w-full block bg-transparent border-0 border-b-2 px-0 focus:ring-0 focus:border-indigo-500 duration-150;
+  }
+
   h1 {
     @apply text-4xl;
   }
@@ -51,5 +58,9 @@
 
   .timeline-card {
     @apply order-1 bg-gray-800 shadow-xl w-5/12 p-8 border-t-8 border-blue-500;
+  }
+
+  .badge {
+    @apply flex-shrink-0 font-bold px-4 py-2 border-r-0 border-l-0 border-b-0 border-t-4 shadow-xl border-blue-500 bg-gray-800;
   }
 }
