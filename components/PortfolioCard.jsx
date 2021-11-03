@@ -33,7 +33,7 @@ function PortfolioCard({
         href={href}
         target="_blank"
         rel="noreferrer noopener"
-        className="opacity-0 absolute bottom-7 right-7 bg-gray-800 p-3 rounded-full shadow-xl group-hover:opacity-100 group hover:bg-gray-400 duration-150"
+        className="opacity-0 absolute bottom-5 right-5 bg-gray-800 p-3 rounded-full shadow-xl group-hover:opacity-100 group hover:bg-gray-400 duration-150 z-50"
       >
         <FontAwesomeIcon
           className="text-blue-500 group-hover:text-blue-700 duration-150"

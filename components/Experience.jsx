@@ -1,16 +1,16 @@
-import Image from 'next/image'
-import Timeline from './Timeline'
+import Image from "next/image";
+import Timeline from "./Timeline";
 
 function Portfolio() {
-    return (
-        <div className="mt-20">
-            <h1 className="text-center mb-10 font-orbitron">Experience</h1>
+  return (
+    <section id="experience" className="pt-28">
+      <h1 className="text-center mb-10 font-orbitron">Experience</h1>
 
-            {/* Timeline */}
-            
-            <Timeline />
-        </div>
-    )
+      {/* Timeline */}
+
+      <Timeline />
+    </section>
+  );
 }
 
-export default Portfolio
+export default Portfolio;

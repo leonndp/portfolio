@@ -3,7 +3,7 @@ import PortfolioCard from "./PortfolioCard";
 
 function Portfolio() {
   return (
-    <div className="mt-20">
+    <section id="portfolio" className="pt-28">
       <h1 className="text-center mb-10 font-orbitron">Portfolio</h1>
       <div className="grid lg:grid-cols-2 gap-8">
         <PortfolioCard
@@ -70,7 +70,7 @@ function Portfolio() {
           href="https://www.keystonefunding.com/"
         />
       </div>
-    </div>
+    </section>
   );
 }
 

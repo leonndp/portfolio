@@ -10,7 +10,7 @@ import SkillIcon from "./SkillIcon";
 
 function Skills() {
   return (
-    <div className="mt-20">
+    <section id="skills" className="pt-28">
       <h1 className="text-center mb-10 font-orbitron">Professional Skills</h1>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full">
         <div className="col-span-1 bg-gray-800 p-8 shadow-2xl border-t-8 border-pink-500">
@@ -64,7 +64,7 @@ function Skills() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

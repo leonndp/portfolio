@@ -5,44 +5,51 @@ import { MailIcon, DocumentDownloadIcon } from "@heroicons/react/solid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import {
+  attributes as aboutAttributes,
+  react as AboutContent,
+} from "../content/about.md";
 
 function AboutCard() {
   return (
-    <div className="bg-gray-800 w-full shadow-2xl">
+    <section id="about" className="bg-gray-800 w-full shadow-2xl">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 p-6 lg:p-12">
         <div className="relative col-span-1 h-96 lg:h-auto">
           {/* <Image src='/me.jpg' layout="responsive" width="1072" height="1440" /> */}
-          <Image src="/me.jpg" layout="fill" objectFit="cover" />
+          <Image src={aboutAttributes.img} layout="fill" objectFit="cover" />
         </div>
         <div className="col-span-1 lg:col-span-2">
           <h1>
-            I'm <strong className="font-orbitron">Leon N. Dela Pena</strong>
+            I'm{" "}
+            <strong className="font-orbitron">{aboutAttributes.name}</strong>
           </h1>
-          <h3>Full-Stack Web Developer</h3>
+          <h3>{aboutAttributes.title}</h3>
           <hr className="my-5 border-gray-700" />
           <table className="leading-6">
-            <tr>
-              <td className="font-orbitron font-bold uppercase text-blue-500 pr-16">
-                Age
-              </td>
-              <td>24</td>
-            </tr>
-            <tr>
-              <td className="font-orbitron font-bold uppercase text-blue-500 pr-16">
-                Based in
-              </td>
-              <td>Chicago, Illinois</td>
-            </tr>
-            <tr>
-              <td className="font-orbitron font-bold uppercase text-blue-500 pr-16">
-                E-mail
-              </td>
-              <td>leonndp@gmail.com</td>
-            </tr>
+            <tbody>
+              <tr>
+                <td className="font-orbitron font-bold uppercase text-blue-500 pr-16">
+                  Age
+                </td>
+                <td>{aboutAttributes.age}</td>
+              </tr>
+              <tr>
+                <td className="font-orbitron font-bold uppercase text-blue-500 pr-16">
+                  Based in
+                </td>
+                <td>{aboutAttributes.hometown}</td>
+              </tr>
+              <tr>
+                <td className="font-orbitron font-bold uppercase text-blue-500 pr-16">
+                  E-mail
+                </td>
+                <td>{aboutAttributes.email}</td>
+              </tr>
+            </tbody>
           </table>
           <div className="flex space-x-6 items-center my-5">
             <a
-              href="mailto:leonndp@gmail.com"
+              href={`mailto:${aboutAttributes.email}`}
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -75,16 +82,7 @@ function AboutCard() {
               />
             </a>
           </div>
-          <p>
-            I'm a full-stack web developer based in Quezon City, Philippines. I
-            learned JavaScript back in 2017 and eventually expanded my toolkit
-            to include its related frameworks such as Express and React.
-            Programming is an ever-changing field and I challenge myself to
-            learn the newest technologies; outside of web development I'm also
-            interested in eventaully tackling the fields of Augmented Reality
-            and Machine Learning. Below you can see a list of technologies I'm
-            familiar with as well as projects I have accomplished.
-          </p>
+          <p>{aboutAttributes.summary}</p>
         </div>
       </div>
       <a
@@ -96,7 +94,7 @@ function AboutCard() {
         <DocumentDownloadIcon className="h-10" />
         <span>Download CV</span>
       </a>
-    </div>
+    </section>
   );
 }
 

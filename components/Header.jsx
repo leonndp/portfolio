@@ -1,11 +1,17 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
-import { MenuIcon } from "@heroicons/react/solid";
+import { DocumentDownloadIcon, MenuIcon } from "@heroicons/react/solid";
 import NavLink from "./NavLink";
+import Drawer from "./Drawer";
+import ContactForm from "./ContactForm";
 
 function Header() {
   const [scrollPos, setScrollPos] = useState(0);
+  const [showNavDrawer, setShowNavDrawer] = useState(false);
+  const [showAboutDrawer, setShowAboutDrawer] = useState(false);
+
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPos(position);
@@ -36,18 +42,53 @@ function Header() {
         </Link>
         <nav className="flex items-center space-x-5 lg:space-x-8">
           <div className="hidden lg:flex items-center space-x-8">
-            <NavLink>About</NavLink>
-            <NavLink>Skills</NavLink>
-            <NavLink>Portfolio</NavLink>
-            <NavLink>Experience</NavLink>
-            <NavLink>Contact</NavLink>
+            <NavLink href="#about">About</NavLink>
+            <NavLink href="#skills">Skills</NavLink>
+            <NavLink href="#portfolio">Portfolio</NavLink>
+            <NavLink href="#experience">Experience</NavLink>
+            <NavLink href="#contact">Contact</NavLink>
           </div>
-          <h1 className="text-xl block lg:hidden font-bold font-orbitron uppercase">
-            Menu
-          </h1>
-          <MenuIcon className="h-10 cursor-pointer hover:text-purple-500 duration-150" />
+          <button
+            onClick={(e) => setShowNavDrawer(true)}
+            className="block lg:hidden font-bold font-orbitron uppercase hover:text-purple-500 duration-150"
+          >
+            <h3>Menu</h3>
+          </button>
+          <MenuIcon
+            onClick={(e) => setShowAboutDrawer(true)}
+            className="h-10 cursor-pointer hover:text-purple-500 duration-150"
+          />
         </nav>
       </div>
+      {showNavDrawer && (
+        <Drawer onClose={(e) => setShowNavDrawer(false)}>
+          <nav className="flex flex-col flex-wrap space-y-7 max-w-max">
+            <NavLink href="#about">About</NavLink>
+            <NavLink href="#skills">Skills</NavLink>
+            <NavLink href="#portfolio">Portfolio</NavLink>
+            <NavLink href="#experience">Experience</NavLink>
+            <NavLink href="#contact">Contact</NavLink>
+          </nav>
+        </Drawer>
+      )}
+      {showAboutDrawer && (
+        <Drawer onClose={(e) => setShowAboutDrawer(false)}>
+          <div className="relative w-full h-60 lg:h-96">
+            <Image src="/me.jpg" layout="fill" objectFit="cover" />
+          </div>
+          <h3 className="mt-7 font-orbitron text-center">Leon N. Dela Pena</h3>
+          <a
+            href="https://drive.google.com/file/d/1NOeTpQu0T4bGYKeedWaOKH-Nn4Nd4pUx/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+            className="group my-7 w-full bg-purple-500 hover:bg-indigo-700 py-5 text-2xl font-bold uppercase text-shadow-xl flex items-center justify-center space-x-2 relative duration-200 font-orbitron"
+          >
+            <DocumentDownloadIcon className="h-10" />
+            <span>Download CV</span>
+          </a>
+          <ContactForm />
+        </Drawer>
+      )}
     </header>
   );
 }
