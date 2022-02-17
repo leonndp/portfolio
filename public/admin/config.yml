@@ -73,13 +73,16 @@ collections:
       - label: "Experience"
         name: "experience"
         file: "content/experience.md"
-        widget: "list"
         fields:
-          - { label: "Company", name: "company", widget: "string" }
-          - { label: "Icon", name: "icon", widget: "image" }
-          - { label: "Dates", name: "dates", widget: "string" }
-          - { label: "Role", name: "role", widget: "string" }
-          - { label: "Description", name: "description", widget: "string" }
+          - label: "Work"
+            name: "work"
+            widget: "list"
+            fields:
+              - { label: "Company", name: "company", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "image" }
+              - { label: "Dates", name: "dates", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
       - label: "Links"
         name: "links"
         file: "content/links.md"
