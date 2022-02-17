@@ -15,7 +15,8 @@ function PortfolioCard({
   return (
     <button className="group relative col-span-1 w-full h-72 shadow-2xl">
       <div
-        className={`relative w-full h-full ${bgColor} group-hover:brightness-50 group-focus:brightness-50 duration-300`}
+        style={{ backgroundColor: bgColor }}
+        className={`relative w-full h-full group-hover:brightness-50 group-focus:brightness-50 duration-300`}
       >
         <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 group-hover:scale-125 group-focus:scale-125 duration-300 z-10">
           <img className="mw-96 mh-20" {...ImgProps} />
