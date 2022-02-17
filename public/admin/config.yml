@@ -30,7 +30,7 @@ collections:
           - { label: "Age", name: "age", widget: "string" }
           - { label: "Hometown", name: "hometown", widget: "string" }
           - { label: "Email", name: "email", widget: "string" }
-          - { label: "Summary", name: "summary", widget: "string" }
+          - { label: "Summary", name: "summary", widget: "text" }
       - label: "Skills"
         name: "skills"
         file: "content/skills.md"
@@ -82,7 +82,7 @@ collections:
               - { label: "Icon", name: "icon", widget: "image" }
               - { label: "Dates", name: "dates", widget: "string" }
               - { label: "Role", name: "role", widget: "string" }
-              - { label: "Description", name: "description", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
       - label: "Links"
         name: "links"
         file: "content/links.md"

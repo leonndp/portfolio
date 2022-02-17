@@ -22,9 +22,9 @@ function PortfolioCard({
         </div>
       </div>
       <div className="opacity-0 absolute z-20 w-full py-8 px-16 top-3/4 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-center space-x-6 flex-wrap group-hover:opacity-100 group-focus:opacity-100 group-hover:top-1/2 group-focus:top-1/2 duration-300">
-        {skills.map((skill) => (
-          <span key={skill} className="badge mb-2">
-            {skill}
+        {skills.map((item, key) => (
+          <span key={key} className="badge mb-2">
+            {item.skill}
           </span>
         ))}
       </div>
