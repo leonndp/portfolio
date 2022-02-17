@@ -11,10 +11,7 @@
     @apply bg-gray-900 text-gray-300 overflow-x-hidden;
   }
 
-  input,
-  input[type="text"],
-  input[type="email"],
-  textarea {
+  .contact-field {
     @apply w-full block bg-transparent border-0 border-b-2 px-0 focus:ring-0 focus:border-indigo-500 duration-150;
   }
 

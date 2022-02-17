@@ -4,15 +4,38 @@ function ContactForm() {
   return (
     <form
       name="contact"
-      action="POST"
+      method="POST"
+      action="/success"
       data-netlify="true"
       data-netlify-recaptcha="true"
+      netlify-honeypot="bot-field"
       className="space-y-8"
     >
-      <input name="name" type="text" placeholder="Full Name" />
-      <input name="email" type="email" placeholder="E-Mail" />
-      <input name="subject" type="text" placeholder="Subject" />
-      <textarea name="message" rows="5" placeholder="Your Message" />
+      <input className="hidden contact-field" type="text" name="bot-field" />
+      <input
+        className="contact-field"
+        name="name"
+        type="text"
+        placeholder="Full Name"
+      />
+      <input
+        className="contact-field"
+        name="email"
+        type="email"
+        placeholder="E-Mail"
+      />
+      <input
+        className="contact-field"
+        name="subject"
+        type="text"
+        placeholder="Subject"
+      />
+      <textarea
+        className="contact-field"
+        name="message"
+        rows="5"
+        placeholder="Your Message"
+      />
       <div data-netlify-recaptcha="true"></div>
       <button
         type="submit"
