@@ -36,7 +36,11 @@ function ContactForm() {
         rows="5"
         placeholder="Your Message"
       />
-      <div data-netlify-recaptcha="true"></div>
+      <div
+        className="g-recaptcha"
+        data-sitekey={process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY}
+      ></div>
+
       <button
         type="submit"
         className="group bg-indigo-500 hover:bg-indigo-700 p-4 px-6 text-xl font-bold uppercase text-shadow-xl flex items-center justify-center space-x-4 relative duration-200 font-orbitron"

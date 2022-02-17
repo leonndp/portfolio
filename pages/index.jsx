@@ -27,6 +27,7 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@700&display=swap"
           rel="stylesheet"
         />
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Head>
       <HomeContent />
