@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "deploy": "npm run build && npm run export"
+    "deploy": "yarn build && yarn export"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -17,13 +17,24 @@
     "@fortawesome/react-fontawesome": "^0.1.16",
     "@heroicons/react": "^1.0.5",
     "@tailwindcss/forms": "^0.3.4",
+    "image-trace-loader": "^1.0.2",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^10.0.1",
+    "jimp": "^0.16.1",
+    "lqip-loader": "^2.2.1",
     "netlify-cms-app": "^2.15.66",
     "next": "11.1.2",
+    "next-compose-plugins": "^2.2.1",
     "next-images": "^1.8.2",
     "next-optimized-images": "^2.6.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-scroll-parallax": "^2.4.0"
+    "react-scroll-parallax": "^2.4.0",
+    "responsive-loader": "^2.3.0",
+    "svg-sprite-loader": "^6.0.11",
+    "webp-loader": "^0.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",

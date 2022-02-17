@@ -5,10 +5,7 @@ import { MailIcon, DocumentDownloadIcon } from "@heroicons/react/solid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import {
-  attributes as aboutAttributes,
-  react as AboutContent,
-} from "../content/about.md";
+import { attributes, react as AboutContent } from "../content/about.md";
 
 function AboutCard() {
   return (
@@ -16,14 +13,14 @@ function AboutCard() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 p-6 lg:p-12">
         <div className="relative col-span-1 h-96 lg:h-auto">
           {/* <Image src='/me.jpg' layout="responsive" width="1072" height="1440" /> */}
-          <Image src={aboutAttributes.img} layout="fill" objectFit="cover" />
+          <Image src={attributes.img} layout="fill" objectFit="cover" />
+          {/* <img src={require("./images/me.jpg")} alt="" /> */}
         </div>
         <div className="col-span-1 lg:col-span-2">
           <h1>
-            I'm{" "}
-            <strong className="font-orbitron">{aboutAttributes.name}</strong>
+            I'm <strong className="font-orbitron">{attributes.name}</strong>
           </h1>
-          <h3>{aboutAttributes.title}</h3>
+          <h3>{attributes.title}</h3>
           <hr className="my-5 border-gray-700" />
           <table className="leading-6">
             <tbody>
@@ -31,25 +28,25 @@ function AboutCard() {
                 <td className="font-orbitron font-bold uppercase text-blue-500 pr-16">
                   Age
                 </td>
-                <td>{aboutAttributes.age}</td>
+                <td>{attributes.age}</td>
               </tr>
               <tr>
                 <td className="font-orbitron font-bold uppercase text-blue-500 pr-16">
                   Based in
                 </td>
-                <td>{aboutAttributes.hometown}</td>
+                <td>{attributes.hometown}</td>
               </tr>
               <tr>
                 <td className="font-orbitron font-bold uppercase text-blue-500 pr-16">
                   E-mail
                 </td>
-                <td>{aboutAttributes.email}</td>
+                <td>{attributes.email}</td>
               </tr>
             </tbody>
           </table>
           <div className="flex space-x-6 items-center my-5">
             <a
-              href={`mailto:${aboutAttributes.email}`}
+              href={`mailto:${attributes.email}`}
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -82,7 +79,7 @@ function AboutCard() {
               />
             </a>
           </div>
-          <p>{aboutAttributes.summary}</p>
+          <p>{attributes.summary}</p>
         </div>
       </div>
       <a

@@ -1,9 +1,7 @@
+/* const withOptimizedImages = require("next-optimized-images"); */
+
 module.exports = {
   reactStrictMode: true,
-  images: {
-    loader: "imgix",
-    path: "/",
-  },
   webpack: (cfg) => {
     cfg.module.rules.push({
       test: /\.md$/,
