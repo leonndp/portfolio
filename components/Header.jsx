@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 import { DocumentDownloadIcon, MenuIcon } from "@heroicons/react/solid";
 import NavLink from "./NavLink";
@@ -74,7 +73,7 @@ function Header() {
       {showAboutDrawer && (
         <Drawer onClose={(e) => setShowAboutDrawer(false)}>
           <div className="relative w-full h-60 lg:h-96">
-            <Image src="/me.jpg" layout="fill" objectFit="cover" />
+            <img className="object-cover w-full h-full" src="/me.jpg" alt="" />
           </div>
           <h3 className="mt-7 font-orbitron text-center">Leon N. Dela Pena</h3>
           <a

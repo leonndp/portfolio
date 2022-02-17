@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 function TimelineItem({
   side = "right",
   ImageProps = {
@@ -20,12 +18,7 @@ function TimelineItem({
       <div className="hidden lg:block order-1 w-5/12"></div>
       <div className="relative z-20 flex items-center order-1 shadow-xl w-12 h-12">
         {/* <h1 className="mx-auto font-semibold text-lg text-white">1</h1> */}
-        <Image
-          className="rounded-full"
-          layout="fill"
-          objectFit="contain"
-          {...ImageProps}
-        />
+        <img className="rounded-full object-contain" {...ImageProps} />
       </div>
       <div className="order-1 bg-gray-800 shadow-xl w-3/4 lg:w-5/12 p-8 border-t-8 border-blue-500">
         <div className="text-center space-y-2 mb-5">

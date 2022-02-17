@@ -1,4 +1,3 @@
-import Image from "next/image";
 import PortfolioCard from "./PortfolioCard";
 
 function Portfolio() {

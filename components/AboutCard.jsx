@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { MailIcon, DocumentDownloadIcon } from "@heroicons/react/solid";
 
@@ -13,8 +12,12 @@ function AboutCard() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 p-6 lg:p-12">
         <div className="relative col-span-1 h-96 lg:h-auto">
           {/* <Image src='/me.jpg' layout="responsive" width="1072" height="1440" /> */}
-          <Image src={attributes.img} layout="fill" objectFit="cover" />
-          {/* <img src={require("./images/me.jpg")} alt="" /> */}
+          {/* <Image src={attributes.img} layout="fill" objectFit="cover" /> */}
+          <img
+            className="object-cover w-full h-full"
+            src="/me.jpg"
+            alt="Leon N. Dela Pena"
+          />
         </div>
         <div className="col-span-1 lg:col-span-2">
           <h1>

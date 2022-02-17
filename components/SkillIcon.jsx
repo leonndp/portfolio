@@ -1,12 +1,10 @@
-import Image from 'next/image'
-
-function SkillIcon({children, src="/react.svg"}) {
-    return (
-        <div className="text-center">
-            <Image className="mb-3" src={src} layout="fixed" width={50} height={50} />
-            <p className="text-lg">{children}</p>
-        </div>
-    )
+function SkillIcon({ children, src = "/react.svg" }) {
+  return (
+    <div className="text-center">
+      <img className="mb-3 mx-auto w-12 h-12" src={src} />
+      <p className="text-lg">{children}</p>
+    </div>
+  );
 }
 
-export default SkillIcon
+export default SkillIcon;
