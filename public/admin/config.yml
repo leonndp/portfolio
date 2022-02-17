@@ -31,3 +31,59 @@ collections:
           - { label: "Hometown", name: "hometown", widget: "string" }
           - { label: "Email", name: "email", widget: "string" }
           - { label: "Summary", name: "summary", widget: "string" }
+      - label: "Skills"
+        name: "skills"
+        file: "content/skills.md"
+        fields:
+          - label: "Front-End"
+            name: "frontend"
+            widget: "list"
+            fields:
+              - { label: "Skill", name: "skill", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "image" }
+          - label: "Back-End"
+            name: "backend"
+            widget: "list"
+            fields:
+              - { label: "Skill", name: "skill", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "image" }
+          - label: "Database"
+            name: "database"
+            widget: "list"
+            fields:
+              - { label: "Skill", name: "skill", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "image" }
+      - label: "Portfolio"
+        name: "portfolio"
+        file: "content/portfolio.md"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - label: "Skills"
+                name: "skills"
+                widget: "list"
+                fields:
+                  - { label: "Skill", name: "skill", widget: "string" }
+              - { label: "Color", name: "color", widget: "string" }
+              - { label: "Href", name: "href", widget: "string" }
+      - label: "Experience"
+        name: "experience"
+        widget: "list"
+        fields:
+          - { label: "Company", name: "company", widget: "string" }
+          - { label: "Icon", name: "icon", widget: "image" }
+          - { label: "Dates", name: "dates", widget: "string" }
+          - { label: "Role", name: "role", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
+      - label: "Links"
+        name: "links"
+        file: "content/links.md"
+        fields:
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Github", name: "github", widget: "string" }
+          - { label: "LinkedIn", name: "linkedin", widget: "string" }
+          - { label: "Resume", name: "resume", widget: "string" }
