@@ -1,5 +1,5 @@
 ---
-name: Leon N. Dela Penaaa
+name: Leon N. Dela Pena
 title: Full-Stack Web Developer
 img: /me.jpg
 age: 24
