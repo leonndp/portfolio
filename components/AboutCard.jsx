@@ -4,26 +4,32 @@ import { MailIcon, DocumentDownloadIcon } from "@heroicons/react/solid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { attributes, react as AboutContent } from "../content/about.md";
+import {
+  attributes as aboutAttributes,
+  react as AboutContent,
+} from "../content/about.md";
+import {
+  attributes as linksAttributes,
+  react as LinksContent,
+} from "../content/links.md";
 
 function AboutCard() {
   return (
     <section id="about" className="bg-gray-800 w-full shadow-2xl">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 p-6 lg:p-12">
         <div className="relative col-span-1 h-96 lg:h-auto">
-          {/* <Image src='/me.jpg' layout="responsive" width="1072" height="1440" /> */}
-          {/* <Image src={attributes.img} layout="fill" objectFit="cover" /> */}
           <img
             className="object-cover w-full h-full"
-            src="/me.jpg"
+            src={aboutAttributes.img}
             alt="Leon N. Dela Pena"
           />
         </div>
         <div className="col-span-1 lg:col-span-2">
           <h1>
-            I'm <strong className="font-orbitron">{attributes.name}</strong>
+            I'm{" "}
+            <strong className="font-orbitron">{aboutAttributes.name}</strong>
           </h1>
-          <h3>{attributes.title}</h3>
+          <h3>{aboutAttributes.title}</h3>
           <hr className="my-5 border-gray-700" />
           <table className="leading-6">
             <tbody>
@@ -31,25 +37,25 @@ function AboutCard() {
                 <td className="font-orbitron font-bold uppercase text-blue-500 pr-16">
                   Age
                 </td>
-                <td>{attributes.age}</td>
+                <td>{aboutAttributes.age}</td>
               </tr>
               <tr>
                 <td className="font-orbitron font-bold uppercase text-blue-500 pr-16">
                   Based in
                 </td>
-                <td>{attributes.hometown}</td>
+                <td>{aboutAttributes.hometown}</td>
               </tr>
               <tr>
                 <td className="font-orbitron font-bold uppercase text-blue-500 pr-16">
                   E-mail
                 </td>
-                <td>{attributes.email}</td>
+                <td>{linksAttributes.email}</td>
               </tr>
             </tbody>
           </table>
           <div className="flex space-x-6 items-center my-5">
             <a
-              href={`mailto:${attributes.email}`}
+              href={`mailto:${linksAttributes.email}`}
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -60,7 +66,7 @@ function AboutCard() {
               />
             </a>
             <a
-              href="https://www.github.com/leonndp"
+              href={linksAttributes.github}
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -71,7 +77,7 @@ function AboutCard() {
               />
             </a>
             <a
-              href="https://www.linkedin.com/in/leonndp/"
+              href={linksAttributes.linkedin}
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -82,11 +88,11 @@ function AboutCard() {
               />
             </a>
           </div>
-          <p>{attributes.summary}</p>
+          <p>{aboutAttributes.summary}</p>
         </div>
       </div>
       <a
-        href="https://drive.google.com/file/d/1NOeTpQu0T4bGYKeedWaOKH-Nn4Nd4pUx/view?usp=sharing"
+        href={linksAttributes.resume}
         target="_blank"
         rel="noreferrer"
         className="group w-full bg-purple-500 hover:bg-indigo-700 py-8 text-2xl font-bold uppercase text-shadow-xl flex items-center justify-center space-x-2 relative duration-200 font-orbitron"

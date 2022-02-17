@@ -4,6 +4,8 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import ContactForm from "./ContactForm";
 
+import { attributes, react as LinksContent } from "../content/links.md";
+
 function Contact() {
   return (
     <section id="contact" className="pt-28">
@@ -19,7 +21,7 @@ function Contact() {
               <tr>
                 <td className="pr-8">
                   <a
-                    href="mailto:leonndp@gmail.com"
+                    href={`mailto:${attributes.email}`}
                     target="_blank"
                     rel="noreferrer noopener"
                   >
@@ -32,19 +34,19 @@ function Contact() {
                 </td>
                 <td>
                   <a
-                    href="mailto:leonndp@gmail.com"
+                    href={`mailto:${attributes.email}`}
                     target="_blank"
                     rel="noreferrer noopener"
                     className="underline"
                   >
-                    leonndp@gmail.com
+                    {attributes.email}
                   </a>
                 </td>
               </tr>
               <tr>
                 <td className="pr-8">
                   <a
-                    href="https://www.github.com/leonndp"
+                    href={attributes.github}
                     target="_blank"
                     rel="noreferrer noopener"
                   >
@@ -57,19 +59,19 @@ function Contact() {
                 </td>
                 <td>
                   <a
-                    href="https://www.github.com/leonndp"
+                    href={attributes.github}
                     target="_blank"
                     rel="noreferrer noopener"
                     className="underline"
                   >
-                    https://www.github.com/leonndp
+                    {attributes.github}
                   </a>
                 </td>
               </tr>
               <tr>
                 <td className="pr-8">
                   <a
-                    href="https://www.linkedin.com/in/leonndp/"
+                    href={attributes.linkedin}
                     target="_blank"
                     rel="noreferrer noopener"
                   >
@@ -82,12 +84,12 @@ function Contact() {
                 </td>
                 <td>
                   <a
-                    href="https://www.linkedin.com/in/leonndp/"
+                    href={attributes.linkedin}
                     target="_blank"
                     rel="noreferrer noopener"
                     className="underline"
                   >
-                    https://www.linkedin.com/in/leonndp/
+                    {attributes.linkedin}
                   </a>
                 </td>
               </tr>
@@ -95,7 +97,7 @@ function Contact() {
           </table>
 
           <a
-            href="https://drive.google.com/file/d/1NOeTpQu0T4bGYKeedWaOKH-Nn4Nd4pUx/view?usp=sharing"
+            href={attributes.resume}
             target="_blank"
             rel="noreferrer"
             className="group mt-10 w-full bg-purple-500 hover:bg-indigo-700 py-5 text-2xl font-bold uppercase text-shadow-xl flex items-center justify-center space-x-2 relative duration-200 font-orbitron"

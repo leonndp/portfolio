@@ -5,6 +5,7 @@ import { DocumentDownloadIcon, MenuIcon } from "@heroicons/react/solid";
 import NavLink from "./NavLink";
 import Drawer from "./Drawer";
 import ContactForm from "./ContactForm";
+import { attributes, react as LinksContent } from "../content/links.md";
 
 function Header() {
   const [scrollPos, setScrollPos] = useState(0);
@@ -77,7 +78,7 @@ function Header() {
           </div>
           <h3 className="mt-7 font-orbitron text-center">Leon N. Dela Pena</h3>
           <a
-            href="https://drive.google.com/file/d/1NOeTpQu0T4bGYKeedWaOKH-Nn4Nd4pUx/view?usp=sharing"
+            href={attributes.resume}
             target="_blank"
             rel="noreferrer"
             className="group my-7 w-full bg-purple-500 hover:bg-indigo-700 py-5 text-2xl font-bold uppercase text-shadow-xl flex items-center justify-center space-x-2 relative duration-200 font-orbitron"

@@ -26,7 +26,7 @@ collections:
         fields:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Img", name: "img", widget: "string" }
+          - { label: "Img", name: "img", widget: "image" }
           - { label: "Age", name: "age", widget: "string" }
           - { label: "Hometown", name: "hometown", widget: "string" }
           - { label: "Email", name: "email", widget: "string" }
