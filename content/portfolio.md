@@ -10,7 +10,7 @@ projects:
       - skill: CraftCMS
       - skill: GraphQL
       - skill: Responsive Design
-    color: bg-green-800
+    color: "#166534"
     href: https://cleanpoweron.com/
   - title: J3 Capital Group
     image: img/j3-logo.png
@@ -19,7 +19,7 @@ projects:
       - skill: Gatsby
       - skill: Material-UI
       - skill: Responsive Design
-    color: bg-indigo-600
+    color: "#4F46E5"
     href: https://j3capitalgroup.com/
   - title: More Active
     image: img/moreactive-logo.png
@@ -28,7 +28,7 @@ projects:
       - skill: PostCSS
       - skill: Javascript ES6
       - skill: Responsive Design
-    color: bg-green-300
+    color: "#86EFAC"
     href: https://www.moreactive.com/
   - title: Loanzify
     image: img/loanzify-logo.png
@@ -37,7 +37,7 @@ projects:
       - skill: PostCSS
       - skill: Javascript ES6
       - skill: Responsive Design
-    color: bg-pink-300
+    color: "#F9A8D4"
     href: https://www.loanzify.com/
   - title: Keystone Funding
     image: img/keystone-logo.png
@@ -46,6 +46,6 @@ projects:
       - skill: PostCSS
       - skill: Javascript ES6
       - skill: Responsive Design
-    color: bg-blue-900
+    color: "#1E3A8A"
     href: https://www.keystonefunding.com/
 ---
