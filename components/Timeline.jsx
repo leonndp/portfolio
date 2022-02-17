@@ -20,6 +20,7 @@ function Timeline() {
           company={item.company}
           role={item.role}
           description={item.description}
+          side={key % 2 === 0 ? "right" : "left"}
         />
       ))}
     </div>
