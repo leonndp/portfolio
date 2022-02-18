@@ -11,7 +11,12 @@ function ContactForm() {
       netlify-honeypot="bot-field"
       className="space-y-8"
     >
-      <input className="hidden contact-field" type="text" name="bot-field" />
+      <input
+        className="hidden contact-field"
+        name="bot-field"
+        type="text"
+        value="contact"
+      />
       <input
         className="contact-field"
         name="name"
