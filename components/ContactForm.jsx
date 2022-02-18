@@ -7,7 +7,7 @@ function ContactForm({ name = "contact", honeypot = "bot-field" }) {
       method="POST"
       action="/success"
       data-netlify="true"
-      data-netlify-recaptcha="true"
+      /* data-netlify-recaptcha="true" */
       netlify-honeypot={honeypot}
       className="space-y-8"
     >
@@ -41,10 +41,11 @@ function ContactForm({ name = "contact", honeypot = "bot-field" }) {
         rows="5"
         placeholder="Your Message"
       />
-      <div
+      {/* <div
+        id={`${name}-recaptcha`}
         className="g-recaptcha"
         data-sitekey={process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY}
-      ></div>
+      ></div> */}
 
       <button
         type="submit"
