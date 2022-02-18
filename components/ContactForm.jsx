@@ -8,7 +8,7 @@ function ContactForm({ name = "contact", honeypot = "bot-field" }) {
       action="/success"
       data-netlify="true"
       /* data-netlify-recaptcha="true" */
-      netlify-honeypot={honeypot}
+      /* netlify-honeypot={honeypot} */
       className="space-y-8"
     >
       <input
