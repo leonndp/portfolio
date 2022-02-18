@@ -11,12 +11,7 @@ function ContactForm({ name = "contact", honeypot = "bot-field" }) {
       /* netlify-honeypot={honeypot} */
       className="space-y-8"
     >
-      <input
-        className="hidden contact-field"
-        name={honeypot}
-        type="text"
-        value={name}
-      />
+      <input className="hidden" name={honeypot} type="text" value={name} />
       <input
         className="contact-field"
         name="name"
