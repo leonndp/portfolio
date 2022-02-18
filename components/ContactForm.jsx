@@ -1,21 +1,21 @@
 import { PaperAirplaneIcon } from "@heroicons/react/solid";
 
-function ContactForm() {
+function ContactForm({ name = "contact", honeypot = "bot-field" }) {
   return (
     <form
-      name="contact"
+      name={name}
       method="POST"
       action="/success"
       data-netlify="true"
       data-netlify-recaptcha="true"
-      netlify-honeypot="bot-field"
+      netlify-honeypot={honeypot}
       className="space-y-8"
     >
       <input
         className="hidden contact-field"
-        name="bot-field"
+        name={honeypot}
         type="text"
-        value="contact"
+        value={name}
       />
       <input
         className="contact-field"

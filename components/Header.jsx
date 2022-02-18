@@ -86,7 +86,7 @@ function Header() {
             <DocumentDownloadIcon className="h-10" />
             <span>Download CV</span>
           </a>
-          <ContactForm />
+          <ContactForm name="contact-sidebar" honeypot="honeypot" />
         </Drawer>
       )}
     </header>
