@@ -16,7 +16,7 @@ backend:
   - skill: Node/Express
     icon: img/nodejs.svg
   - skill: GraphQL
-    icon: img/graphql.svg
+    icon: img/graphql.png
   - skill: Python/Flask
     icon: img/python.png
 database:
