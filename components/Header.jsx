@@ -8,6 +8,8 @@ import Drawer from "./Drawer";
 import ContactForm from "./ContactForm";
 import { attributes, react as LinksContent } from "../content/links.md";
 
+import { Rotate, Zoom } from "react-reveal";
+
 function Header() {
   const [showNavDrawer, setShowNavDrawer] = useState(false);
   const [showAboutDrawer, setShowAboutDrawer] = useState(false);
@@ -22,7 +24,7 @@ function Header() {
     >
       <div className="flex container mx-auto px-5 items-center justify-between text-shadow-lg">
         <Link className="group" href="/" passHref={true}>
-          <a className="hover:animate-bounce text-4xl sm:text-5xl font-bold tracking-widest font-audiowide">
+          <a className="hover:animate-Zoom text-4xl sm:text-5xl font-bold tracking-widest font-audiowide">
             <span className="text-blue-500">L</span>
             <span className="text-indigo-500">N</span>
             <span className="text-purple-500">Đ</span>
@@ -31,22 +33,36 @@ function Header() {
         </Link>
         <nav className="flex items-center space-x-5 lg:space-x-8">
           <div className="hidden lg:flex items-center space-x-8">
-            <NavLink href="#about">About</NavLink>
-            <NavLink href="#skills">Skills</NavLink>
-            <NavLink href="#portfolio">Portfolio</NavLink>
-            <NavLink href="#experience">Experience</NavLink>
-            <NavLink href="#contact">Contact</NavLink>
+            <Zoom duration={450} right>
+              <NavLink href="#about">About</NavLink>
+            </Zoom>
+            <Zoom right duration={450} delay={150}>
+              <NavLink href="#skills">Skills</NavLink>
+            </Zoom>
+            <Zoom right duration={450} delay={300}>
+              <NavLink href="#portfolio">Portfolio</NavLink>
+            </Zoom>
+            <Zoom right duration={450} delay={450}>
+              <NavLink href="#experience">Experience</NavLink>
+            </Zoom>
+            <Zoom right duration={450} delay={600}>
+              <NavLink href="#contact">Contact</NavLink>
+            </Zoom>
           </div>
-          <button
-            onClick={(e) => setShowNavDrawer(true)}
-            className="block lg:hidden font-bold font-orbitron uppercase hover:text-purple-500 duration-150"
-          >
-            <h3>Menu</h3>
-          </button>
-          <MenuIcon
-            onClick={(e) => setShowAboutDrawer(true)}
-            className="h-10 cursor-pointer hover:text-purple-500 duration-150"
-          />
+          <Zoom duration={300}>
+            <button
+              onClick={(e) => setShowNavDrawer(true)}
+              className="block lg:hidden font-bold font-orbitron uppercase hover:text-purple-500 duration-150"
+            >
+              <h3>Menu</h3>
+            </button>
+          </Zoom>
+          <Rotate duration={300}>
+            <MenuIcon
+              onClick={(e) => setShowAboutDrawer(true)}
+              className="h-10 cursor-pointer hover:text-purple-500 duration-150"
+            />
+          </Rotate>
         </nav>
       </div>
       {/* Navigation Drawer */}
