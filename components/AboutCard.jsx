@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { MailIcon, DocumentDownloadIcon } from "@heroicons/react/solid";
 
@@ -13,9 +14,19 @@ import {
   react as LinksContent,
 } from "../content/links.md";
 
-function AboutCard() {
+const AboutCard = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   return (
-    <section id="about" className="bg-gray-800 w-full shadow-2xl">
+    <section
+      id="about"
+      className={`bg-gray-800 w-full shadow-2xl transition-all ease-in-out duration-700 ${
+        !isLoaded && "translate-y-96"
+      } ${!isLoaded ? "opacity-0" : "opacity-100"}`}
+    >
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 p-6 lg:p-12">
         <div className="relative col-span-1 h-96 lg:h-auto">
           <img
@@ -102,6 +113,6 @@ function AboutCard() {
       </a>
     </section>
   );
-}
+};
 
 export default AboutCard;

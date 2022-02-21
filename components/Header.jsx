@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Link from "next/link";
+import ScrollContext from "../contexts/ScrollContext";
 
 import { DocumentDownloadIcon, MenuIcon } from "@heroicons/react/solid";
 import NavLink from "./NavLink";
@@ -8,27 +9,15 @@ import ContactForm from "./ContactForm";
 import { attributes, react as LinksContent } from "../content/links.md";
 
 function Header() {
-  const [scrollPos, setScrollPos] = useState(0);
   const [showNavDrawer, setShowNavDrawer] = useState(false);
   const [showAboutDrawer, setShowAboutDrawer] = useState(false);
 
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPos(position);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const scrollPosition = useContext(ScrollContext);
 
   return (
     <header
       className={`fixed py-5 w-full z-30 bg-gray-900 ${
-        scrollPos > 0 ? "bg-opacity-80" : "bg-opacity-40"
+        scrollPosition > 0 ? "bg-opacity-80" : "bg-opacity-40"
       } duration-150 shadow-xl`}
     >
       <div className="flex container mx-auto px-5 items-center justify-between text-shadow-lg">
@@ -60,6 +49,7 @@ function Header() {
           />
         </nav>
       </div>
+      {/* Navigation Drawer */}
       {showNavDrawer && (
         <Drawer onClose={(e) => setShowNavDrawer(false)}>
           <nav className="flex flex-col flex-wrap space-y-7 max-w-max">
@@ -71,6 +61,7 @@ function Header() {
           </nav>
         </Drawer>
       )}
+      {/* About Drawer */}
       {showAboutDrawer && (
         <Drawer onClose={(e) => setShowAboutDrawer(false)}>
           <div className="relative w-full h-60 lg:h-96">
@@ -86,7 +77,7 @@ function Header() {
             <DocumentDownloadIcon className="h-10" />
             <span>Download CV</span>
           </a>
-          <ContactForm name="contact-sidebar" honeypot="honeypot" />
+          <ContactForm name="contact-sidebar" />
         </Drawer>
       )}
     </header>

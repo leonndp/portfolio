@@ -1,6 +1,6 @@
 import { PaperAirplaneIcon } from "@heroicons/react/solid";
 
-function ContactForm({ name = "contact", honeypot = "bot-field" }) {
+function ContactForm({ name = "contact" }) {
   return (
     <form
       name={name}
