@@ -13,7 +13,6 @@ export default function Home() {
   const { title } = attributes;
 
   const scrollPos = useScrollPosition();
-  console.log(process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID);
   return (
     <ScrollContext.Provider value={scrollPos}>
       <div className="relative">
