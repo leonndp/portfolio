@@ -11,7 +11,7 @@ function Contact() {
   return (
     <section id="contact" className="pt-28">
       <h1 className="text-center mb-10 font-orbitron">Let's Get Started!</h1>
-      <div className="grid lg:grid-cols-2 lg:gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-6 w-full">
         <Slide duration={300} left>
           <div className="col-span-1 bg-gray-800 p-8 shadow-2xl border-t-8 border-indigo-500">
             <h2 className="font-orbitron mb-10">Contact Me!</h2>

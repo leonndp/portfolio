@@ -15,7 +15,7 @@ export default function Home() {
   const scrollPos = useScrollPosition();
   return (
     <ScrollContext.Provider value={scrollPos}>
-      <div className="relative">
+      <div className="relative w-full">
         <Head>
           <title>Leon N. Dela Pena | Full-Stack Developer</title>
           <meta
@@ -58,7 +58,6 @@ export default function Home() {
 
           <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         </Head>
-        <HomeContent />
         <Header />
         <Banner />
         <Content />
