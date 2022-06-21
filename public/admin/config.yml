@@ -82,7 +82,7 @@ collections:
               - { label: "Icon", name: "icon", widget: "image" }
               - { label: "Dates", name: "dates", widget: "string" }
               - { label: "Role", name: "role", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Description", name: "description", widget: "text", optional: true }
       - label: "Links"
         name: "links"
         file: "content/links.md"
