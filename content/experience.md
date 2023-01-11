@@ -9,4 +9,8 @@ work:
       implemented fast-loading, optimized, and mobile-friendly websites for
       various clients and coordinated with back-end developers in implementing
       web apps.
+  - company: Hyatt
+    icon: https://mms.businesswire.com/media/20221101006068/en/671263/5/HY_L001c_RGB.jpg
+    dates: Jun 2022 - Present
+    role: Product Engineer (Front-End)
 ---
