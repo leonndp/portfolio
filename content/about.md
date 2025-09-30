@@ -1,8 +1,8 @@
 ---
 name: Leon N. Dela Pena
 title: Full-Stack Web Developer
-img: img/0h4a2098.jpg
-age: 24
+img: img/me-avatar.jpeg
+age: 28
 hometown: Chicago, Illinois
 email: leonndp@gmail.com
 summary: Hi! I'm a full-stack web developer based in Chicago, Illinois. I

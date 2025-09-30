@@ -10,8 +10,8 @@ function Content() {
       <div className="container mx-auto px-5 sm:px-10 xl:px-40 2xl:px-72">
         <About />
         <Skills />
-        <Portfolio />
         <Experience />
+        <Portfolio />
         <Contact />
         <h4 className="my-20 text-center">Leon N. Dela Pena © 2021</h4>
       </div>

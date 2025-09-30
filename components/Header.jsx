@@ -23,7 +23,7 @@ function Header() {
       } duration-150 shadow-xl`}
     >
       <div className="flex container mx-auto px-5 items-center justify-between text-shadow-lg">
-        <Link className="group" href="/" passHref={true}>
+        <Link legacyBehavior className="group" href="/" passHref={true}>
           <a className="hover:animate-Zoom text-4xl sm:text-5xl font-bold tracking-widest font-audiowide">
             <span className="text-blue-500">L</span>
             <span className="text-indigo-500">N</span>
@@ -81,7 +81,7 @@ function Header() {
       {showAboutDrawer && (
         <Drawer onClose={(e) => setShowAboutDrawer(false)}>
           <div className="relative w-full h-60 lg:h-96">
-            <img className="object-cover w-full h-full" src="/me.jpg" alt="" />
+            <img className="object-cover w-full h-full" src="img/me-avatar.jpeg" alt="" />
           </div>
           <h3 className="mt-7 font-orbitron text-center">Leon N. Dela Pena</h3>
           <a
